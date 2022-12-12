@@ -29,6 +29,11 @@ html {
   --grey-background-color: rgba(245, 244, 250, 1);
   --text-footer-color: rgba(255, 255, 255, 0.6);
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .list {
   list-style: none;
   padding: 0;
@@ -52,7 +57,32 @@ body {
   color: var(--logo-black-color);
 }
 /* Site nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.header-section {
+  border-bottom: 1px solid #ececec;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+.site-nav .item {
+  margin-right: 50px;
+}
+.site-nav .item:last-child {
+  margin-right: 0;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--text-black-color);
   font-weight: 500;
   font-size: 14px;
@@ -66,6 +96,13 @@ body {
 }
 .site-nav .link.current {
   color: var(--accent-blue-color);
+}
+.address-header {
+  display: flex;
+  margin-left: auto;
+}
+.address-header .item + .item {
+  margin-left: 50px;
 }
 .address-header .link {
   color: var(--text-gray-color);
@@ -81,6 +118,7 @@ body {
 }
 /* Hero */
 .hero-title {
+  padding-top: 200px;
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--text-white-color);
@@ -92,6 +130,7 @@ body {
   text-transform: uppercase;
 }
 .button {
+  margin-bottom: 200px;
   display: inline-block;
   padding: 10px 32px;
   font-family: inherit;
@@ -126,15 +165,15 @@ button {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid springgreen;
+  /* outline: 2px solid springgreen; */
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  outline: 2px solid rosybrown;
+  /* outline: 2px solid rosybrown; */
 }
 
 .section-title {
@@ -148,6 +187,9 @@ button {
 }
 .feature-section {
   padding-bottom: 0;
+}
+.feature-list {
+  display: flex;
 }
 .feature-list .title {
   margin-top: 0;
@@ -163,6 +205,26 @@ button {
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
+}
+/* Чим ми займаємося */
+.work-list {
+  display: flex;
+}
+.work-list .item {
+  margin-right: 30px;
+}
+.work-list .item:last-child {
+  margin-right: 0;
+}
+/* Наша команда */
+.team-list {
+  display: flex;
+}
+.team-list .card {
+  margin-right: 30px;
+}
+.team-list .card:last-child {
+  margin-right: 0;
 }
 .team-list .img {
   margin-top: 0;
@@ -188,7 +250,7 @@ button {
   background-color: var(--text-white-color);
 }
 /* Тимчасовий фон секції Наша команда */
-.team-list {
+.team-section {
   background-color: var(--grey-background-color);
 }
 /* Футер */
@@ -227,6 +289,12 @@ button {
 }
 
 /* Сторінка портфоліо */
+.filter-list {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
 .button-navigation {
   display: inline-block;
   padding: 6px 22px;
@@ -240,6 +308,12 @@ button {
   line-height: 1.62;
   text-align: center;
 }
+.filter-list .item {
+  margin-right: 8px;
+}
+.filter-list .item:last-child {
+  margin-right: 0;
+}
 .button-navigation:hover,
 .button-navigation:focus {
   color: var(--text-white-color);
@@ -248,10 +322,26 @@ button {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-.works-list .img {
-  margin-top: 0;
-  margin-bottom: 20px;
+/* Портфоліо */
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
+.works-list .item {
+  flex-basis: calc(100% / 3 - 30px);
+  /* width: 370px; */
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #EEEEEE ;
+}
+/* .works-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+.works-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+} */
 .works-list .title {
   margin-top: 0;
   margin-bottom: 4px;
@@ -263,13 +353,16 @@ button {
 }
 .works-list .text {
   margin-top: 0;
-  margin-bottom: 20px;
   color: var(--text-gray-color);
   font-size: 16px;
   line-height: 1.88;
 }
 .works-list .link {
   text-decoration: none;
+  margin: 0;
+}
+.titte-card {
+  padding: 24px 20px;
 }
 .visually-hidden {
   position: absolute;
